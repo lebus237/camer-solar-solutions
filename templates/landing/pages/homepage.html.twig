@@ -1,0 +1,7 @@
+{% extends 'landing/base.html.twig' %}
+
+{% block content %}
+    <div {{ stimulus_controller('hello', {
+        fullName: fullName
+    }) }}>Loading ...</div>
+{% endblock %}

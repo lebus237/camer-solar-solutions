@@ -45,4 +45,8 @@ return [
     Sulu\Search\Infrastructure\Symfony\HttpKernel\SuluSearchBundle::class => ['all' => true],
     Sulu\CustomUrl\Infrastructure\Symfony\HttpKernel\SuluCustomUrlBundle::class => ['all' => true],
     CmsIg\Seal\Integration\Symfony\SealBundle::class => ['all' => true],
+    Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
+    Symfony\UX\StimulusBundle\StimulusBundle::class => ['all' => true],
+    Symfony\UX\React\ReactBundle::class => ['all' => true],
+    Symfony\UX\Turbo\TurboBundle::class => ['all' => true],
 ];
