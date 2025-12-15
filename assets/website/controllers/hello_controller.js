@@ -1,6 +1,6 @@
-import { Controller } from '@hotwired/stimulus';
-import React from 'react';
-import {createRoot} from "react-dom/client";
+import { Controller } from "@hotwired/stimulus";
+import React from "react";
+import { createRoot } from "react-dom/client";
 import Hello from "../react/src/views/HelloView";
 
 /*
@@ -13,9 +13,9 @@ import Hello from "../react/src/views/HelloView";
  * Delete this file or adapt it for your use!
  */
 export default class extends Controller {
-    static values = { fullName: String }
-    connect() {
-        const root = createRoot(this.element)
-        root.render(<Hello fullName={this.fullNameValue} />)
-    }
+  static values = { fullName: String };
+  connect() {
+    const root = createRoot(this.element);
+    root.render(<Hello fullName={this.fullNameValue} />);
+  }
 }

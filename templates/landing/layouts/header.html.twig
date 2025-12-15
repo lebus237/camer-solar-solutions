@@ -1,0 +1,17 @@
+<nav class="text-2xl">
+    <ul>
+        <li>
+            <a href="{{ sulu_content_root_path() }}">Homepage</a>
+        </li>
+
+        {% for item in sulu_page_navigation_root_tree('main', 1, {
+            title: 'title',
+            url: 'url',
+        }) %}
+            <li>
+                <a href="{{ sulu_content_path(item.url) }}"
+                   title="{{ item.title }}">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

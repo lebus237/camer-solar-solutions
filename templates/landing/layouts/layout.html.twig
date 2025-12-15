@@ -1,0 +1,24 @@
+{% extends 'landing/base.html.twig' %}
+
+
+{% block content %}
+    <header class="w-full">
+        <section class="announcement-message">
+        </section>
+        <section class="lg:py-6">
+            {% block header %}
+                {% include 'landing/layouts/header.html.twig' %}
+            {% endblock %}
+        </section>
+    </header>
+
+    <main>
+        {% block page_content %}{% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
+        {% endblock %}
+    </footer>
+{% endblock %}

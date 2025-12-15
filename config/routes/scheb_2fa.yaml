@@ -1,5 +1,5 @@
 2fa_login_check_admin:
-    path: /admin/2fa_check
+  path: /admin/2fa_check
 
 # Activate the following routes to use 2fa on your website application:
 #

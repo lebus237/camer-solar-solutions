@@ -1,8 +1,19 @@
-controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+website_controllers:
+  resource:
+    path: ../src/Controller/Website/
+    namespace: App\Controller\Website\
+  type: attribute
+  prefix: /
+  name_prefix: website_
+#  requirements:
+#      _locale: fr|en
+
+admin_controllers:
+  resource:
+    path: ../src/Controller/Admin/
+    namespace: App\Controller\Admin\
+  type: attribute
+  prefix: /api/admin
 
 #static:
 #    path: /static-route

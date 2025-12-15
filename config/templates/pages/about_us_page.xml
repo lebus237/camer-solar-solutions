@@ -3,28 +3,36 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>landing-homepage</key>
+    <key>about_us_page</key>
 
-    <view>landing/pages/homepage</view>
+    <view>landing/pages/about_us</view>
     <controller>Sulu\Content\UserInterface\Controller\Website\ContentController::indexAction</controller>
-    <cacheLifetime>86400</cacheLifetime>
+    <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title lang="en">Homepage</title>
-        <title lang="fr">Page d'acceuil</title>
+        <title lang="fr">A propos</title>
+        <title lang="en">About us</title>
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
-                <title lang="en">Title</title>
                 <title lang="fr">Titre</title>
+                <title lang="en">Title</title>
             </meta>
             <params>
                 <param name="headline" value="true"/>
             </params>
 
             <tag name="sulu.rlp.part"/>
+        </property>
+        <property name="url" type="route" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+                <title lang="fr">Adresse</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
         </property>
     </properties>
 </template>

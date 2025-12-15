@@ -4,7 +4,7 @@
           xsi:schemaLocation="http://schemas.sulu.io/webspace/webspace http://schemas.sulu.io/webspace/webspace-1.1.xsd">
     <!-- See: http://docs.sulu.io/en/latest/book/webspaces.html how to configure your webspace-->
 
-    <name>Solar Solutions Landing</name>
+    <name>Solar Solutions</name>
     <key>landing</key>
 
     <security permission-check="true">
@@ -13,13 +13,13 @@
 
     <localizations>
         <!-- See: http://docs.sulu.io/en/latest/book/localization.html how to add new localizations -->
-        <localization language="en"/>
         <localization language="fr" default="true"/>
+        <localization language="en"/>
     </localizations>
 
     <default-templates>
         <default-template type="page">default</default-template>
-        <default-template type="home">landing-homepage</default-template>
+        <default-template type="home">home_page</default-template>
     </default-templates>
 
     <!-- See: https://docs.sulu.io/en/latest/book/webspaces.html#excluded-templates-optional
@@ -30,7 +30,6 @@
 
     <templates>
         <template type="search">search/search</template>
-        <!-- See: http://docs.sulu.io/en/latest/cookbook/custom-error-page.html how to create a custom error page -->
         <template type="error">error/error</template>
     </templates>
 
@@ -38,8 +37,14 @@
         <contexts>
             <context key="main">
                 <meta>
-                    <title lang="en">Main Navigation</title>
                     <title lang="fr">Navigation Principale</title>
+                    <title lang="en">Main Navigation</title>
+                </meta>
+            </context>
+            <context key="footer">
+                <meta>
+                    <title lang="fr">Navigation Secondaire</title>
+                    <title lang="en">Footer Navigation</title>
                 </meta>
             </context>
         </contexts>
@@ -47,32 +52,20 @@
 
     <portals>
         <portal>
-            <name>Website</name>
-            <key>website</key>
+            <name>landing-solar-solutions</name>
+            <key>landing</key>
 
             <environments>
                 <environment type="prod">
                     <urls>
-                        <url language="en">{host}/{localization}</url>
                         <url language="fr">{host}</url>
-                    </urls>
-                </environment>
-                <environment type="stage">
-                    <urls>
                         <url language="en">{host}/{localization}</url>
-                        <url language="fr">{host}</url>
-                    </urls>
-                </environment>
-                <environment type="test">
-                    <urls>
-                        <url language="en">{host}/{localization}</url>
-                        <url language="fr">{host}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
-                        <url language="en">{host}/{localization}</url>
                         <url language="fr">{host}</url>
+                        <url language="en">{host}/{localization}</url>
                     </urls>
                 </environment>
             </environments>

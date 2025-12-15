@@ -19,27 +19,6 @@
     {% endblock %}
 </head>
 <body>
-    <header>
-        {% block header %}
-            <nav class="text-2xl">
-                <ul>
-                    <li>
-                        <a href="{{ sulu_content_root_path() }}">Homepage</a>
-                    </li>
-
-                    {% for item in sulu_page_navigation_root_tree('main', 1, {
-                        title: 'title',
-                        url: 'url',
-                    }) %}
-                        <li>
-                            <a href="{{ sulu_content_path(item.url) }}"
-                               title="{{ item.title }}">{{ item.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        {% endblock %}
-    </header>
 
     {#
     <form action="{{ path('sulu_search.website_search') }}" method="GET">
@@ -47,17 +26,9 @@
         <input type="submit" value="Go"/>
     </form>
     #}
-
     <main>
         {% block content %}{% endblock %}
     </main>
-
-    <footer>
-        {% block footer %}
-            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
-        {% endblock %}
-    </footer>
-
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}
