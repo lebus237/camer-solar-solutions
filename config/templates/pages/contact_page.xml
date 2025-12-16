@@ -5,7 +5,7 @@
 
     <key>contact_page</key>
 
-    <view>landing/pages/contact</view>
+    <view>pages/landing/contact</view>
     <controller>Sulu\Content\UserInterface\Controller\Website\ContentController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 

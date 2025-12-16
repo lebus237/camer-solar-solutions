@@ -1,14 +1,14 @@
-{% extends 'landing/base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 
 {% block content %}
     <header class="w-full lg:h-24 landing-header">
         {% block header %}
-            {% include 'landing/layouts/header.html.twig' %}
+            {% include 'includes/header.html.twig' %}
         {% endblock %}
     </header>
 
-    <main class="lg:min-h-[calc(100vh-416px)]">
+    <main class="lg:min-h-[500px]">
         {% block page_content %}{% endblock %}
     </main>
 

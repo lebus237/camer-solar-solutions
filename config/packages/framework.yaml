@@ -11,6 +11,15 @@ framework:
   #esi: true
   #fragments: true
 
+#  assets:
+#      packages:
+#          desktop_package:
+#              base_path: /uploads/media/sulu-240x
+#          tablet_package:
+#              base_path: /uploads/media/sulu-100x100
+#          mobile_package:
+#              base_path: /uploads/media/sulu-25x25
+
 when@test:
   framework:
     test: true

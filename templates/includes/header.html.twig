@@ -1,0 +1,47 @@
+<div>
+    <section class="announcement-message w-full bg-emerald-600 lg:h-8 text-white text-center content-center">
+        Nous sommes ouverts pour toutes les entreprises !
+    </section>
+    <section class="container h-16 flex overflow-hidden items-center justify-between">
+        <div>
+            <a href="{{ sulu_content_root_path() }}">
+                <figure>
+                    <img src="{{ asset('/static/images/logo.svg') }}" alt="Logo de l'entreprise" width="56px">
+                </figure>
+            </a>
+        </div>
+        <nav>
+            <ul class="flex justify-between lg:gap-x-12 font-family-sans font-medium">
+                {% for item in sulu_page_navigation_root_tree('main', 1, {
+                    title: 'title',
+                    url: 'url',
+                }) %}
+                    <li>
+                        <a href="{{ sulu_content_path(item.url) }}"
+                           title="{{ item.title }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="flex items-center gap-x-8">
+            <div>
+                <div>
+                    <label>
+                        <input class="rounded-full lg:w-64 py-1.5 px-3 border text-sm border-gray-300" type="search" placeholder="Rechercher"/>
+                    </label>
+                </div>
+            </div>
+            <div>
+                {% for localization in localizations %}
+                    <a href="{{ localization.url }}"
+                       title="{{ localization.locale }}"
+                       class="navbar__item navbar__item--locale{{ localization.locale == app.request.locale ? ' navbar__item--active' : '' }}">
+                    <span>
+                        {{ localization.locale }}
+                    </span>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>

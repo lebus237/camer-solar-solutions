@@ -14,7 +14,7 @@ class ProductController extends AbstractController
     public function index(): Response
     {
         return $this->render(
-            'landing/pages/homepage.html.twig',
+            'pages/landing/homepage.html.twig',
             [
                 'fullName' => 'Lebus 237',
             ],

@@ -5,7 +5,7 @@
 
     <key>default</key>
 
-    <view>landing/pages/default</view>
+    <view>pages/landing/default</view>
     <controller>Sulu\Content\UserInterface\Controller\Website\ContentController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 

@@ -1,12 +1,10 @@
-website_controllers:
-  resource:
-    path: ../src/Controller/Website/
-    namespace: App\Controller\Website\
-  type: attribute
-  prefix: /
-  name_prefix: website_
-#  requirements:
-#      _locale: fr|en
+#website_controllers:
+#  resource:
+#    path: ../src/Controller/Website/
+#    namespace: App\Controller\Website\
+#  type: attribute
+#  prefix: /
+#  name_prefix: website_
 
 admin_controllers:
   resource:
@@ -14,6 +12,14 @@ admin_controllers:
     namespace: App\Controller\Admin\
   type: attribute
   prefix: /api/admin
+
+#landing_page_view:
+#    path:
+#        en: /en
+#        fr: /
+#    options:
+#        sulu_context: website
+#    controller: App\Controller\Website\LandingController::indexAction
 
 #static:
 #    path: /static-route

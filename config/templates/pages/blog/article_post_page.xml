@@ -5,7 +5,7 @@
 
     <key>article_post_page</key>
 
-    <view>landing/pages/blog/article_post</view>
+    <view>pages/landing/blog/article_post</view>
     <controller>Sulu\Content\UserInterface\Controller\Website\ContentController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 

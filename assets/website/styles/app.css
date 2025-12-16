@@ -2,18 +2,54 @@
 @source not "../../../public";
 
 @font-face {
-    font-family: 'Commissioner';
-    src: url('../assets/fonts/Commissioner/Commissioner-Regular.woff') format('woff'),
-         url('../assets/fonts/Commissioner/Commissioner-Regular.woff2') format('woff2');
+  font-family: "Commissioner";
+  src:
+    url("../assets/fonts/Commissioner/Commissioner-Regular.woff") format("woff"),
+    url("../assets/fonts/Commissioner/Commissioner-Regular.woff2") format("woff2");
 
-    unicode-range: U+65-90, U+97-122;
-    font-display: swap;
+  unicode-range: U+65-90, U+97-122;
+  font-display: swap;
 }
 
 @theme {
-    --font-sans: 'Commissioner', sans-serif;
+  --font-sans: "Commissioner", sans-serif;
 }
 
 body {
-    background-color: white;
+  background-color: white;
+}
+
+@media (width > 768px) {
+  .container {
+    max-width: 768px;
+    margin-inline: auto;
+  }
+}
+
+@media (width > 820px) {
+  .container {
+    max-width: 820px;
+    margin-inline: auto;
+  }
+}
+
+@media (width > 1024px) {
+  .container {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
+}
+
+@media (width > 1280px) {
+  .container {
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+}
+
+@media (width > 1440px) {
+  .container {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
 }
