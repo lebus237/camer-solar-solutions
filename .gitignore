@@ -51,8 +51,8 @@ phpstan.neon
 ###< phpstan/phpstan ###
 
 ###> php-cs-fixer/shim ###
-/.php-cs-fixer.php
-/.php-cs-fixer.cache
+#/.php-cs-fixer.php
+#/.php-cs-fixer.cache
 ###< php-cs-fixer/shim ###
 
 ###> vincentlanglet/twig-cs-fixer ###
@@ -63,6 +63,7 @@ phpstan.neon
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
 /public/build/
+/public/uploads/
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###

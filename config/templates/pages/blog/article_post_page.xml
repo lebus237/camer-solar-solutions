@@ -3,15 +3,15 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <key>product_list_page</key>
+    <key>article_post_page</key>
 
-    <view>landing/pages/about_us</view>
+    <view>landing/pages/blog/article_post</view>
     <controller>Sulu\Content\UserInterface\Controller\Website\ContentController::indexAction</controller>
     <cacheLifetime>604800</cacheLifetime>
 
     <meta>
-        <title lang="fr">Produits</title>
-        <title lang="en">Products</title>
+        <title lang="fr">Post</title>
+        <title lang="en">Post</title>
     </meta>
 
     <properties>

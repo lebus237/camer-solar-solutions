@@ -68,7 +68,15 @@ Encore
   .enablePostCssLoader()
 
   // uncomment if you use React
-  .enableReactPreset();
+  .enableReactPreset()
+
+  .configureDevServerOptions((options) => {
+    options.liveReload = true;
+    options.watchFiles = [
+      "templates/**/*.twig", // Watch all Twig files
+      // 'src/**/*.php' // Optionally watch PHP/Controller files too
+    ];
+  });
 
 // uncomment to get integrity="..." attributes on your script & link tags
 // requires WebpackEncoreBundle 1.4 or higher

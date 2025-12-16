@@ -2,21 +2,17 @@
 
 
 {% block content %}
-    <header class="w-full">
-        <section class="announcement-message">
-        </section>
-        <section class="lg:py-6">
-            {% block header %}
-                {% include 'landing/layouts/header.html.twig' %}
-            {% endblock %}
-        </section>
+    <header class="w-full lg:h-24 landing-header">
+        {% block header %}
+            {% include 'landing/layouts/header.html.twig' %}
+        {% endblock %}
     </header>
 
-    <main>
+    <main class="lg:min-h-[calc(100vh-416px)]">
         {% block page_content %}{% endblock %}
     </main>
 
-    <footer>
+    <footer class="w-full bg-gray-200 h-80">
         {% block footer %}
             <p>Copyright {{ 'now'|date('Y') }} SULU</p>
         {% endblock %}

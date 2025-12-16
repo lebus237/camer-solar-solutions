@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Controller\Website;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sulu\Content\UserInterface\Controller\Website\ContentController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class LandingController extends AbstractController
+class LandingController extends ContentController
 {
     #[Route(path: [
         'fr' => '/',
@@ -24,21 +24,21 @@ class LandingController extends AbstractController
         );
     }
 
-    #[Route(path: [
-        'fr' => '/services',
-        'en' => '/en/services',
-    ], name: 'services_page')]
-    public function services(): Response
-    {
-        return $this->render('landing/pages/services_page.html.twig');
-    }
-
-    #[Route(path: [
-        'fr' => '/a-propos',
-        'en' => '/en/about-us',
-    ], name: 'about_us_page')]
-    public function about_us(): Response
-    {
-        return $this->render('landing/pages/about_us.html.twig');
-    }
+    //    #[Route(path: [
+    //        'fr' => '/services',
+    //        'en' => '/en/services',
+    //    ], name: 'services_page')]
+    //    public function services(): Response
+    //    {
+    //        return $this->render('landing/pages/services_page.html.twig');
+    //    }
+    //
+    //    #[Route(path: [
+    //        'fr' => '/a-propos',
+    //        'en' => '/en/about-us',
+    //    ], name: 'about_us_page')]
+    //    public function about_us(): Response
+    //    {
+    //        return $this->render('landing/pages/about_us.html.twig');
+    //    }
 }
