@@ -3,6 +3,6 @@
 
 {% block page_content %}
     <section>
-        {% include 'includes/sections/hero_section.html.twig' %}
+        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}
     </section>
 {% endblock %}

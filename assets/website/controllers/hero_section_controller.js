@@ -4,18 +4,19 @@ import { HeroSectionComponent } from "../react/src/components/widgets";
 
 export default class extends Controller {
   static values = {
-    picturesList: String,
+    pictures: Array,
     enableCarousel: Boolean,
     title: String,
     description: String,
   };
+
   connect() {
     const root = createRoot(this.element);
     root.render(
       <HeroSectionComponent
         title={this.titleValue}
         description={this.descriptionValue}
-        picturesList={this.picturesListValue}
+        picturesList={this.picturesValue}
         enableCarousel={this.enableCarouselValue}
       />,
     );
