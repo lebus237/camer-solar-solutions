@@ -27,8 +27,11 @@
     "format": "oxfmt"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide": "^4.1.4",
     "@symfony/stimulus-bridge": "^4.0.1",
     "@tailwindcss/postcss": "^4.1.18",
+    "keen-slider": "^6.8.6",
     "postcss": "^8.5.6",
     "postcss-loader": "^8.2.0",
     "prop-types": "^15.8.1",

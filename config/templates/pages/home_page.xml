@@ -62,13 +62,15 @@
 
                     <tag name="sulu.rlp.part"/>
                 </property>
-                <property name="background_pictures" type="media_selection">
+                <property name="background_pictures" type="media_selection" multilingual="false">
                     <meta>
                         <title lang="fr">Images</title>
                         <title lang="en">Images</title>
                     </meta>
 
                     <params>
+                        <param name="min" value="1"/>
+                        <param name="max" value="5"/>
                         <param name="types" value="image,video"/>
 <!--                        <param name="displayOptions" type="collection">-->
 <!--                            <param name="leftTop" value="true"/>-->

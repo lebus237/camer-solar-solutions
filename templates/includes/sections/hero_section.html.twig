@@ -3,5 +3,5 @@
 <div {{ stimulus_controller('hero_section', {
     title: content.hero_title,
     description: content.hero_subtitle,
-    pictures: content.background_pictures|map(p => p.thumbnails['sulu-400x400.jpg'])
+    pictures: content.background_pictures|map(p => p.url)
 }) }}>Loading hero section ...</div>
