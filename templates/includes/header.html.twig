@@ -2,15 +2,15 @@
     <section class="announcement-message w-full bg-emerald-600 lg:h-8 text-white text-center content-center">
         Nous sommes ouverts pour toutes les entreprises !
     </section>
-    <section class="container h-16 flex overflow-hidden items-center justify-between">
-        <div>
+    <section class="container h-20 flex overflow-hidden items-center justify-between">
+        <div class="basis-1/3">
             <a href="{{ sulu_content_root_path() }}">
                 <figure>
                     <img src="{{ asset('/static/images/logo.svg') }}" alt="Logo de l'entreprise" width="56px">
                 </figure>
             </a>
         </div>
-        <nav>
+        <nav class="basis-1/3">
             <ul class="flex justify-between lg:gap-x-12 font-family-sans font-medium">
                 {% for item in sulu_page_navigation_root_tree('main', 1, {
                     title: 'title',
@@ -23,7 +23,7 @@
                 {% endfor %}
             </ul>
         </nav>
-        <div class="flex items-center gap-x-8">
+        <div class="flex items-center gap-x-8 basis-1/3 justify-end">
             <div>
                 <div>
                     <label>

@@ -2,6 +2,7 @@ import React from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Options } from "@splidejs/splide";
 import {useViewPort} from "../../../hooks/use-view-port";
+import Button from "../../core/button/Button";
 
 export type HeroSectionComponentProps = {
   picturesList: string[];
@@ -42,11 +43,21 @@ export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
           </div>
         </div>
       </Splide>
-        <div className="absolute top-0 left-0 w-full h-full bg-black/50">
-            <div className='relative w-full h-full'>
-                <div className='absolute top-3/5 left-1/3 transform -translate-x-1/2 -translate-y-1/2'>
-                    <h1 className="text-white lg:text-6xl xl:text-7xl font-bold">{props.title}</h1>
-                    <p className="text-white text-xl">{props.description}</p>
+        <div className="absolute top-0 left-0 w-full h-full bg-black/60">
+            <div className='relative container h-full mx-auto'>
+                <div className='absolute bottom-1/4 xxl:bottom-1/5 xl:bottom-1/4 lg:w-3/5 xxl:w-2/5 space-y-6'>
+                    <div className='space-y-6'>
+                        <h1 className="text-white lg:text-6xl font-bold">{props.title}</h1>
+                        <p className="text-white text-xl font-light">{props.description}</p>
+                    </div>
+                    <div className='flex gap-x-3'>
+                        <a href='/catalogue' className=''>
+                            <Button label='Voir catalog ue' type='default' variant='solid'/>
+                        </a>
+                        <a href='/contacts' className='cursor-pointer'>
+                            <Button label='Contactez-nous' type='default' variant='outline'/>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
