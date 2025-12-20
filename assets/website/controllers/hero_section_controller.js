@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus";
 import { createRoot } from "react-dom/client";
-import { HeroSectionComponent } from "../react/src/components/widgets";
+import { HeroSectionComponent } from "../react/components/widgets";
 
 export default class extends Controller {
   static values = {

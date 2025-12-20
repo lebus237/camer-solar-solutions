@@ -12,8 +12,8 @@
 }
 
 @theme {
-    --font-sans: "Commissioner", sans-serif;
-    --breakpoint-xxl: 90rem;
+  --font-sans: "Commissioner", sans-serif;
+  --breakpoint-xxl: 90rem;
 }
 
 body {

@@ -11,14 +11,14 @@
 
     <meta>
         <title lang="en">Article</title>
-        <title lang="de">Artikel</title>
+<!--        <title lang="de">Artikel</title>-->
     </meta>
 
     <properties>
         <property name="title" type="text_line" mandatory="true">
             <meta>
                 <title lang="en">Title</title>
-                <title lang="de">Titel</title>
+<!--                <title lang="de">Titel</title>-->
             </meta>
             <params>
                 <param name="headline" value="true"/>
@@ -30,14 +30,14 @@
         <property name="url" type="page_tree_route">
             <meta>
                 <title lang="en">Resourcelocator</title>
-                <title lang="de">Adresse</title>
+<!--                <title lang="de">Adresse</title>-->
             </meta>
         </property>
 
         <property name="article" type="text_editor">
             <meta>
                 <title lang="en">Article</title>
-                <title lang="de">Artikel</title>
+<!--                <title lang="de">Artikel</title>-->
             </meta>
         </property>
     </properties>

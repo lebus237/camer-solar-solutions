@@ -3,5 +3,6 @@
 <div {{ stimulus_controller('hero_section', {
     title: content.hero_title,
     description: content.hero_subtitle,
-    pictures: content.background_pictures|map(p => p.url)
+    pictures: content.background_pictures|map(p => p.url),
+    enableCarousel: content.background_pictures|length < 0
 }) }}>Loading hero section ...</div>

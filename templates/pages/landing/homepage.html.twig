@@ -1,4 +1,13 @@
-{% extends 'pages/landing/layout.html.twig' %}
+{% extends 'pages/layout.html.twig' %}
+
+{% block meta %}
+    {{ include('@SuluWebsite/Extension/seo.html.twig', {
+        seo: extension.seo|default([]),
+        content: content|default([]),
+        localizations: localizations|default([]),
+        shadowBaseLocale: shadowBaseLocale|default(),
+    }) }}
+{% endblock %}
 
 
 {% block page_content %}
