@@ -13,8 +13,8 @@ export const ProductCard = (props: ProductType) => {
       </header>
       <footer className="text-black h-1/5 content-center">
         <div>
-          <h4 className="font-normal">{props.designation}</h4>
-          <p className="text-md font-medium">
+          <h4 className="font-medium font-sans   text-dark">{props.designation}</h4>
+          <p className="text-xl font-bold !font-montserrat-sans">
             {Number(props.price).toLocaleString("fr-FR", {
               style: "currency",
               currency: "XAF",

@@ -51,7 +51,7 @@ export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
         <div className="relative container h-full mx-auto">
           <div className="absolute bottom-1/4 xxl:bottom-1/5 xl:bottom-1/4 lg:w-3/5 xxl:w-2/5 space-y-6">
             <div className="space-y-6">
-              <h1 className="text-white lg:text-6xl font-bold">{props.title}</h1>
+              <h1 className="text-white lg:text-6xl font-bold font-sans">{props.title}</h1>
               {props.description && props.description.length > 0 && (
                 <p className="text-white text-xl font-light">{props.description}</p>
               )}
