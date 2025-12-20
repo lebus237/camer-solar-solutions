@@ -14,4 +14,15 @@
     <section>
         {% include 'includes/sections/hero_section.html.twig' with { content: content } %}
     </section>
+    <section class="container min-h-80 xl:py-12 lg:py-8 md:py-6 px-3 lg:space-y-9">
+        <header class="space-y-3">
+            <h3 class="text-center text-4xl font-semibold text-dark">Our Products</h3>
+            <p class="text-center text-[1.111111vw] font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+        </header>
+        <div {{ stimulus_controller('product_list_preview', {
+            previewList: content.background_pictures|map(p => p.url),
+        }) }}>
+            <div class="text-center">Loading list ...</div>
+        </div>
+    </section>
 {% endblock %}
