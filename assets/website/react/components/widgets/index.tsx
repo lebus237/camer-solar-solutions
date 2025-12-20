@@ -1,1 +1,1 @@
-export { HeroSectionComponent } from "./hero-section/HeroSectionComponent";
+export { HeroSectionComponent } from "../features/hero-section/HeroSectionComponent";

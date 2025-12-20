@@ -14,8 +14,6 @@ export type HeroSectionComponentProps = {
 export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
   const viewPort = useViewPort();
 
-  console.log(props.enableCarousel);
-
   const options: Options = {
     type: "fade",
     gap: "0px",
