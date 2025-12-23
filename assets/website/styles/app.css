@@ -10,7 +10,9 @@
 
   --font-md: 1rem;
 
-  --color-dark: rgba(0, 0, 0, 8);
+  --color-dark: rgba(38, 38, 39, 1);
+  --color-primary: rgba(252, 90, 14, 0.8);
+  --color-foreground: #cda692;
 
   --breakpoint-xxl: 90rem;
 }

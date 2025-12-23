@@ -68,3 +68,6 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
 /public/static/images/products/
+/assets/website/assets/data/services.ts
+/assets/website/assets/data/products.ts
+

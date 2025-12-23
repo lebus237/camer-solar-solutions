@@ -9,10 +9,11 @@
     }) }}
 {% endblock %}
 
-{% set catalog_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Catalog' or item.title == 'Catalogue') %}
 
 
 {% block page_content %}
+    {% set catalog_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Catalog' or item.title == 'Catalogue') %}
+
     <section>
         {% include 'includes/sections/hero_section.html.twig' with { content: content } %}
     </section>
@@ -29,29 +30,42 @@
                 </div>
             </a>
         </header>
-        <div {{ stimulus_controller('product_list_preview', {
-            previewList: content.background_pictures|map(p => p.url),
-        }) }}>
-            <div class="text-center">Loading list ...</div>
-        </div>
-    </section>
-    <section class="container min-h-80 xl:py-12 lg:py-8 md:py-6 px-3 lg:space-y-9">
-        <header class="space-y-3">
-            <h3 class="text-center text-4xl font-semibold text-dark">{{ content.product_section_title }}</h3>
-            <p class="text-center text-md font-light xl:w-2/5 mx-auto">{{ content.product_section_subtitle }}</p>
-        </header>
-        <div {{ stimulus_controller('product_list_preview', {
-            previewList: content.background_pictures|map(p => p.url),
-        }) }}>
-            <div class="text-center">Loading list ...</div>
-        </div>
-
-        {% set catalog_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Catalog' or item.title == 'Catalogue') %}
-        <a href="{{ sulu_content_path(catalog_path.url) }}" class="block w-fit mx-auto">
-            <div class="flex w-fit gap-x-2.5">
-                <span>See all available products</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+        <main class="space-y-6">
+            <div {{ stimulus_controller('product_list_preview', {
+                previewList: content.background_pictures|map(p => p.url),
+            }) }}>
+                <div class="text-center">Loading list ...</div>
             </div>
-        </a>
+            <div {{ stimulus_controller('product_list_preview', {
+                previewList: content.background_pictures|map(p => p.url),
+            }) }}>
+                <div class="text-center">Loading list ...</div>
+            </div>
+        </main>
     </section>
+    <section class="bg-contain h-fit w-full bg-center" style="background-image: url({{ asset(path='hex-background-networking.jg', packageName='illustrations') }})">
+        <div class="container min-h-80 xl:py-12 lg:py-8 md:py-6 px-3 lg:space-y-9">
+            <header class="space-y-3">
+                <h3 class="text-center text-4xl font-semibold text-dark">{{ content.service_section_title }}</h3>
+                <p class="text-center text-md font-light xl:w-2/5 mx-auto">{{ content.service_section_subtitle }}</p>
+            </header>
+            <div {{ stimulus_controller('services_list') }}>
+                <div class="text-center">Loading list ...</div>
+            </div>
+        </div>
+    </section>
+    <section class="xl:py-12 bg-dark">
+        <div class="container" {{ stimulus_controller('resource_section', {
+            content: content.edu_fill_text,
+            pictures: content.edu_pictures|map(p => p.url),
+            title: content.edu_title})
+        }}>
+        </div>
+    </section>
+{#    <section class="xl:py-12">#}
+{#        <div class="container">#}
+{#            {% include 'includes/widgets/embedded_map.html.twig' %}#}
+{#        </div>#}
+{#    </section>#}
+
 {% endblock %}
