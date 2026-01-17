@@ -1,6 +1,8 @@
 import { Controller } from "@hotwired/stimulus";
 import { createRoot } from "react-dom/client";
 import { ResourceSectionComponent } from "../react/components/features/resource-section/ResourceSectionComponent";
+import { ProjectPreviewComponent } from "../react/components/features/projects/ProjectPreviewComponent";
+import { projects } from "../assets/data/projects";
 
 export default class extends Controller {
   static values = {
@@ -11,12 +13,6 @@ export default class extends Controller {
 
   connect() {
     const root = createRoot(this.element);
-    root.render(
-      <ResourceSectionComponent
-        title={this.titleValue}
-        content={this.contentValue}
-        thumbnails={this.picturesValue}
-      />,
-    );
+    root.render(<ProjectPreviewComponent previewList={[...projects, ...projects]} />);
   }
 }
