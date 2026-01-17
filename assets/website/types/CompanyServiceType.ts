@@ -5,4 +5,5 @@ export type CompanyServiceType = {
   descriptionText: string;
   thumbnail: string;
   active?: boolean;
+  tag?: string;
 };

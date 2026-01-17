@@ -6,10 +6,11 @@ import { services } from "../assets/data/services";
 export default class extends Controller {
   static values = {
     previewList: Array,
+    path: String,
   };
 
   connect() {
     const root = createRoot(this.element);
-    root.render(<CompanyServicePreviewComponent previewList={services} />);
+    root.render(<CompanyServicePreviewComponent previewList={services} path={this.pathValue} />);
   }
 }

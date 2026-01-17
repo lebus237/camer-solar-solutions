@@ -13,11 +13,12 @@
 
 {% block page_content %}
     {% set catalog_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Catalog' or item.title == 'Catalogue') %}
+    {% set services_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Our services' or item.title == 'Nos services') %}
     {% set case_study_path = sulu_page_navigation_root_flat('footer',1)|find(item => item.title == 'Case studies' or item.title == 'Nos realisations') %}
 
-{#    <section>#}
-{#        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}#}
-{#    </section>#}
+    <section>
+        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}
+    </section>
     <section class="container min-h-80 xl:py-24 lg:py-12 md:py-6 px-3 lg:space-y-12">
         <header class="flex justify-center items-end">
             <div class="space-y-3 w-full">
@@ -66,31 +67,35 @@
             </div>
         </main>
     </section>
-    <section class="h-80 relative">
-        <div class="absolute top-0 -z-10 h-full w-full bg-dark bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>
-        <div class="container content-center h-full">
-            <h1 class="text-5xl xl:text-6xl space-y-2">
-                <div class="text-center text-white/90 font-bold">S.C.V.P.S.D vous souhaite</div>
-                <div class="text-center text-yellow-500 font-extrabold">Bonne annee 2026</div>
-            </h1>
-        </div>
-    </section>
-    <section class="bg-contain h-fit w-full bg-center" style="background-image: url({{ asset(path='hex-background-networking.jg', packageName='illustrations') }})">
-        <div class="container min-h-80 xl:py-12 lg:py-8 md:py-6 px-3 lg:space-y-9">
-            <header class="space-y-3">
-                <h3 class="text-center text-4xl font-semibold text-dark">{{ content.service_section_title }}</h3>
-                <p class="text-center text-md font-light xl:w-2/5 mx-auto">{{ content.service_section_subtitle }}</p>
-            </header>
-            <div {{ stimulus_controller('services_list') }}>
+{#    <section class="h-80 relative">#}
+{#        <div class="absolute top-0 -z-10 h-full w-full bg-dark bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>#}
+{#        <div class="container content-center h-full">#}
+{#            <h1 class="text-5xl xl:text-6xl space-y-2">#}
+{#                <div class="text-center text-white/90 font-bold">S.C.V.P.S.D vous souhaite</div>#}
+{#                <div class="text-center text-yellow-500 font-extrabold">Bonne annee 2026</div>#}
+{#            </h1>#}
+{#        </div>#}
+{#    </section>#}
+    <section class="bg-contain h-fit w-full bg-center bg-dark" >
+        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 px-3 lg:space-y-9 grid md:grid-cols-2">
+            <aside class="content-center">
+                <div class="space-y-3">
+                    <h3 class="text-6xl text-yellow-500 font-semibold  xl:w-3/5">{{ content.service_section_title }}</h3>
+                    <p class="text-2xl font-light xl:w-3/5 text-start text-white/90">{{ content.service_section_subtitle }}</p>
+                </div>
+            </aside>
+            <aside {{ stimulus_controller('services_list',{
+                path: services_path.url })
+            }}>
                 <div class="text-center">Loading list ...</div>
-            </div>
+            </aside>
         </div>
     </section>
     <section class="xl:py-24">
         <div class="container xl:space-y-12">
             <header class="flex justify-between">
                 <h3 class="text-center text-4xl font-semibold text-dark">{{ content.project_title }}</h3>
-                <div class="bg-primary px-6 py-3 content-center text-center text-white">
+                <div class="bg-dark px-6 py-3 content-center text-center text-white">
                     <a href="{{ sulu_content_path(case_study_path.url) }}">See all projects</a>
                 </div>
             </header>

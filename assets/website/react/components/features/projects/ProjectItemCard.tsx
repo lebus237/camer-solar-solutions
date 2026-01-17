@@ -33,7 +33,7 @@ export const ProjectItemCard = (props: ProjectItemType) => {
           <a href={`/projects/${props.slug}`} className="hover:underline">
             Voir plus
           </a>
-            <ArrowUpRight size={18}/>
+          <ArrowUpRight size={18} />
         </p>
       </footer>
     </div>
