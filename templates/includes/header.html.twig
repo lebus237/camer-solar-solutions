@@ -1,6 +1,6 @@
 <div>
-    <section class="w-full  lg:h-20 ">
-        <div class="relative h-2/3 flex justify-between">
+    <section class="w-full  lg:h-14 ">
+        <div class="relative h-full flex justify-between">
             <aside class="bg-dark w-full xl:[clip-path:polygon(0_0,60%_0,70%_100%,0_100%)]">
                 <div class="container content-center h-full">
                     <ul class="flex gap-x-12">
@@ -67,15 +67,19 @@
                 </div>
             </div>
             <div>
-                {% for localization in localizations %}
-                    <a href="{{ localization.url }}"
-                       title="{{ localization.locale }}"
-                       class="navbar__item navbar__item--locale{{ localization.locale == app.request.locale ? ' navbar__item--active' : '' }}">
-                    <span>
-                        {{ localization.locale }}
-                    </span>
-                    </a>
-                {% endfor %}
+                <!-- TODO: Fix language switcher -->
+                <div class="fi fi-{{ app.request.locale == 'en' ? 'gb' : app.request.locale }}"></div>
+                <label>
+                    <select class="capitalize font-montserrat-sans text-[15px] font-medium" name="locales" onchange="window.location.href = this.value;" value="{{ localizations|find(item => item.locale == app.request.locale).url }}">
+                        {% for localization in localizations %}
+                            <option class="capitalize" value="{{ localization.url }}" selected="{{ app.request.locale == localization.locale ? '1' : '0' }}">
+                                <span>
+                                    {{ localization.locale }}
+                                </span>
+                            </option>
+                        {% endfor %}
+                    </select>
+                </label>
             </div>
         </div>
     </section>
