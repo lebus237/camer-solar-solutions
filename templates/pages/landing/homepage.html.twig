@@ -40,7 +40,7 @@
                         </div>
                     </a>
                 </header>
-                <div {{ stimulus_controller('product_list_preview', {
+                <div {{ stimulus_controller('features/product_list_preview', {
                     previewList: content.background_pictures|map(p => p.url),
                 }) }}>
                     <div class="text-center">Loading list ...</div>
@@ -59,7 +59,7 @@
                         </div>
                     </a>
                 </header>
-                <div {{ stimulus_controller('product_list_preview', {
+                <div {{ stimulus_controller('features/product_list_preview', {
                     previewList: content.background_pictures|map(p => p.url),
                 }) }}>
                     <div class="text-center">Loading list ...</div>
@@ -84,7 +84,7 @@
                     <p class="text-2xl font-light xl:w-3/5 text-start text-white/90">{{ content.service_section_subtitle }}</p>
                 </div>
             </aside>
-            <aside {{ stimulus_controller('services_list',{
+            <aside {{ stimulus_controller('features/services_list',{
                 path: services_path.url })
             }}>
                 <div class="text-center">Loading list ...</div>
@@ -99,11 +99,11 @@
                     <a href="{{ sulu_content_path(case_study_path.url) }}">See all projects</a>
                 </div>
             </header>
-            <div {{ stimulus_controller('project_section') }}></div>
+            <div {{ stimulus_controller('sections/project_section') }}></div>
         </div>
     </section>
     <section class="xl:py-12 bg-dark">
-        <div class="container" {{ stimulus_controller('resource_section', {
+        <div class="container" {{ stimulus_controller('sections/resource_section', {
             content: content.edu_fill_text,
             pictures: content.edu_pictures|map(p => p.url),
             title: content.edu_title})

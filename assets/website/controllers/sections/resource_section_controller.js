@@ -1,23 +1,21 @@
 import { Controller } from "@hotwired/stimulus";
 import { createRoot } from "react-dom/client";
-import { HeroSectionComponent } from "../react/components/widgets";
+import { ResourceSectionComponent } from "../../react/components/features/resource-section/ResourceSectionComponent";
 
 export default class extends Controller {
   static values = {
+    content: String,
     pictures: Array,
-    enableCarousel: Boolean,
     title: String,
-    description: String,
   };
 
   connect() {
     const root = createRoot(this.element);
     root.render(
-      <HeroSectionComponent
+      <ResourceSectionComponent
         title={this.titleValue}
-        description={this.descriptionValue}
-        picturesList={this.picturesValue}
-        enableCarousel={this.enableCarouselValue}
+        content={this.contentValue}
+        thumbnails={this.picturesValue}
       />,
     );
   }

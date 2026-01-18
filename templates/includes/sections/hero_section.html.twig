@@ -1,6 +1,6 @@
 {#{{ dump(content.background_pictures) }}#}
 
-<div {{ stimulus_controller('hero_section', {
+<div {{ stimulus_controller('sections/hero_section', {
     title: content.hero_title,
     description: content.hero_subtitle,
     pictures: content.background_pictures|map(p => p.url),

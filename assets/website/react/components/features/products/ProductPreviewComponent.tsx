@@ -12,7 +12,7 @@ export const ProductPreviewComponent = (props: { previewList: ProductType[] }) =
         gap: "1.5rem",
         autoplay: true,
         perPage: 4,
-        height: "350px",
+        height: "360px",
         perMove: 1,
         wheel: true,
         interval: 3000,
