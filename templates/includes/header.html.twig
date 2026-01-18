@@ -1,10 +1,41 @@
 <div>
-    <section class="w-full bg-dark lg:h-20 text-white text-center content-center">
-        Nous sommes ouverts pour toutes les entreprises !
-        <span class="text-yellow-500" {{ stimulus_controller('components/base_icon', {
-            type: "calendar-days",
-            size: 20
-        }) }}>...</span>
+    <section class="w-full  lg:h-20 ">
+        <div class="relative h-2/3 flex justify-between">
+            <aside class="bg-dark w-full xl:[clip-path:polygon(0_0,60%_0,70%_100%,0_100%)]">
+                <div class="container content-center h-full">
+                    <ul class="flex gap-x-12">
+                        <li class="text-yellow-500 flex gap-x-2 font-montserrat-sans">
+                            <span {{ stimulus_controller('components/base_icon', {
+                                type: "calendar-check",
+                                size: 17
+                            }) }}></span>
+                            <span class="text-[15px]">Ouvert Lun - Dim / 07h-19h</span>
+                        </li>
+                        <li class="text-yellow-500 flex gap-x-2 font-montserrat-sans">
+                            <span {{ stimulus_controller('components/base_icon', {
+                                type: "map-pin",
+                                size: 17
+                            }) }}></span>
+                            <span class="text-[15px]">Yaounde, Lycee Bilingue Essos</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <aside class="bg-yellow-500 absolute w-full h-full top-0 right-0 [clip-path:polygon(60%_0,100%_0,100%_100%,70%_100%)]">
+                <div class="container content-center h-full">
+                    <ul class="flex gap-x-12 justify-end">
+                        <li class="text-dark flex gap-x-2 font-sans items-center">
+                            <div {{ stimulus_controller('components/base_icon', {
+                                type: "phone",
+                                size: 16
+                            }) }} class="bg-dark p-1 rounded-sm text-white"></div>
+                            <span class="text-[15px] font-medium">(+237) 655 55 55 90 - 675 75 75 30</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+{#        <div class="h-1/3 bg-yellow-500 text-black text-center content-center">ppppp</div>#}
     </section>
     <section class="container h-20 flex overflow-hidden items-center justify-between">
         <div class="xl:basis-1/3">
