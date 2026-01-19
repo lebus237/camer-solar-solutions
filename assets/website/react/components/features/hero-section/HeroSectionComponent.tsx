@@ -15,13 +15,14 @@ export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
   const viewPort = useViewPort();
 
   const options: Options = {
-    type: "fade",
     gap: "0px",
     autoplay: true,
     pauseOnHover: false,
     resetProgress: false,
     height: viewPort?.isDesktop ? "700px" : "500px",
     interval: 5000,
+    direction: "ttb",
+    rewind: true,
   };
 
   return (
@@ -47,7 +48,7 @@ export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
           </div>
         </div>
       </Splide>
-      <div className="absolute top-0 left-0 w-full h-full bg-black/30">
+      <div className="absolute top-0 left-0 w-full h-full bg-black/50">
         <div className="relative container h-full mx-auto">
           <div className="absolute bottom-1/4 xxl:bottom-1/5 xl:bottom-1/4 lg:w-3/5 xxl:w-2/5 space-y-6">
             <div className="space-y-6">
@@ -58,7 +59,7 @@ export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
             </div>
             <div className="flex gap-x-3">
               <a href="/catalogue" className="">
-                <Button label="Voir catalogue" type="default" variant="solid" />
+                <Button label="Voir catalogue" type="primary" variant="solid" />
               </a>
               <a href="/contacts" className="cursor-pointer">
                 <Button label="Contactez-nous" type="default" variant="outline" />

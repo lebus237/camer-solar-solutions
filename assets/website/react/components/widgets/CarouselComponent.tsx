@@ -5,7 +5,7 @@ import { useViewPort } from "../../hooks/use-view-port";
 
 interface CarouselComponentProps<T> {
   items: Array<T & { key: any }>;
-  renderItem: (item: T) => React.ReactNode;
+  renderItem: (item: T, index: number) => React.ReactNode;
   onItemClick?: (item: T) => void;
   config?: CarouselConfigType;
 }
@@ -21,8 +21,8 @@ export function CarouselComponent<T>(props: CarouselComponentProps<T>) {
       <Splide options={props.config} hasTrack={false} className="w-full h-full">
         <div className="relative">
           <SplideTrack>
-            {props.items.map((item) => (
-              <SplideSlide key={item.key}>{props.renderItem(item)}</SplideSlide>
+            {props.items.map((item, index) => (
+              <SplideSlide key={item.key}>{props.renderItem(item, index)}</SplideSlide>
             ))}
           </SplideTrack>
           <div className="splide__arrows">

@@ -11,14 +11,16 @@ export const ProductPreviewComponent = (props: { previewList: ProductType[] }) =
         type: "slide",
         gap: "1.5rem",
         autoplay: true,
-        perPage: 4,
-        height: "360px",
+        perPage: 5,
+        height: "340px",
         perMove: 1,
         wheel: true,
         interval: 3000,
         rewind: true,
       }}
-      renderItem={(item) => <ProductCard {...item} />}
+      renderItem={(item, index) => (
+        <ProductCard {...item} color={index % 2 === 0 ? "dark" : "primary"} />
+      )}
     />
   );
 };

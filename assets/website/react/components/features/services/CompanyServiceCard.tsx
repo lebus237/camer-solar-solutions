@@ -4,10 +4,10 @@ import { Rotate, Slide } from "react-awesome-reveal";
 
 export const CompanyServiceCard = (props: CompanyServiceType & { rootPath: string }) => {
   return (
-    <div className="w-full h-full relative overflow-hidden rounded-xl cursor-pointer group border border-yellow-500 ">
-      <div className="w-full h-full z-10 pt-6">
+    <div className="w-full h-full relative overflow-hidden rounded-lg cursor-pointer group border border-yellow-500 ">
+      <div className="w-full h-full z-10 pt-12">
         <Rotate triggerOnce direction="top-left" cascade duration={500} delay={300} damping={0.1}>
-          <figure className="w-3/5 aspect-square mx-auto">
+          <figure className="w-1/2 aspect-square mx-auto">
             <img src={props.thumbnail} alt={props.designation} className="h-full aspect-video" />
           </figure>
         </Rotate>
