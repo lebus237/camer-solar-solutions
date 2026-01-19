@@ -224,11 +224,30 @@
         </section>
         <section name="project_section">
             <meta>
-                <title lang="fr">Section D'education</title>
-                <title lang="en">Resource Section</title>
+                <title lang="fr">Section realisations</title>
+                <title lang="en">Projects section</title>
             </meta>
             <properties>
                 <property name="project_title" type="text_line">
+                    <meta>
+                        <title lang="fr">Titre</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+            </properties>
+        </section>
+        <section name="contact_section">
+            <meta>
+                <title lang="fr">Section contacts</title>
+                <title lang="en">Contacts section</title>
+            </meta>
+            <properties>
+                <property name="contact_section_title" type="text_line">
                     <meta>
                         <title lang="fr">Titre</title>
                         <title lang="en">Title</title>
