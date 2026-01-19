@@ -17,64 +17,56 @@
     {% set case_study_path = sulu_page_navigation_root_flat('footer',1)|find(item => item.title == 'Case studies' or item.title == 'Nos realisations') %}
 
     <section>
-{#        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}#}
+        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}
     </section>
-{#    <section class="container min-h-80 xl:py-24 lg:py-12 md:py-6 px-3 lg:space-y-12">#}
-{#        <header class="flex justify-between items-start">#}
-{#            <div class="space-y-3 xl:w-3/5">#}
-{#                <h3 class="text-4xl font-semibold text-dark font-sans">{{ content.product_section_title }}</h3>#}
-{#                <p class="text-md font-light lg:w-1/3">{{ content.product_section_subtitle }}</p>#}
-{#            </div>#}
-{#            <div>#}
-{#                <a href="{{ sulu_content_path(catalog_path.url) }}" class="block w-fit">#}
-{#                    <button class="px-9 py-3 rounded-sm cursor-pointer bg-dark text-yellow-500 flex gap-x-2 items-center">#}
-{#                        <span>Voir tout</span>#}
-{#                        <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>#}
-{#                    </button>#}
-{#                </a>#}
-{#            </div>#}
-{#        </header>#}
-{#        <main class="xl:space-y-12">#}
-{#            <div class="space-y-12">#}
-{#                <header class="flex justify-between items-end">#}
-{#                    <h4 class="w-fit xl:text-lg relative  font-medium !font-montserrat-sans">#}
-{#                        <span>Equipements solaires</span>#}
-{#                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>#}
-{#                    </h4>#}
-{#                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">#}
-{#                        <div class="flex justify-end gap-x-1.5 text-[15px] text-black font-medium">#}
-{#                            <span>Voir tout</span>#}
-{#                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </header>#}
-{#                <div {{ stimulus_controller('features/product_list_preview', {#}
-{#                    previewList: content.background_pictures|map(p => p.url),#}
-{#                }) }}>#}
-{#                    <div class="text-center">Loading list ...</div>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="space-y-12">#}
-{#                <header class="flex justify-between items-end">#}
-{#                    <h4 class="w-fit xl:text-lg relative !font-montserrat-sans font-medium">#}
-{#                        <span>Equipements electriques</span>#}
-{#                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>#}
-{#                    </h4>#}
-{#                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">#}
-{#                        <div class="flex justify-end gap-x-1.5 text-[15px] text-black font-medium">#}
-{#                            <span>Voir tout</span>#}
-{#                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </header>#}
-{#                <div {{ stimulus_controller('features/product_list_preview', {#}
-{#                    previewList: content.background_pictures|map(p => p.url),#}
-{#                }) }}>#}
-{#                    <div class="text-center">Loading list ...</div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </main>#}
-{#    </section>#}
+    <section class="container min-h-80 xl:py-24 lg:py-12 md:py-6 px-3 lg:space-y-12">
+        <header class="flex justify-between items-start">
+            <div class="space-y-3 xl:w-3/5">
+                <h3 class="text-4xl font-semibold text-dark font-sans">{{ content.product_section_title }}</h3>
+                <p class="text-md font-light lg:w-1/2">{{ content.product_section_subtitle }}</p>
+            </div>
+        </header>
+        <main class="xl:space-y-12">
+            <div class="space-y-12">
+                <header class="flex justify-between items-end">
+                    <h4 class="w-fit xl:text-lg relative  font-medium !font-montserrat-sans">
+                        <span>Equipements solaires</span>
+                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>
+                    </h4>
+                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">
+                        <div class="flex justify-end items-center gap-x-1.5 text-dark font-medium">
+                            <span class="text-md">Voir tout</span>
+                            <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>
+                        </div>
+                    </a>
+                </header>
+                <div {{ stimulus_controller('features/product_list_preview', {
+                    previewList: content.background_pictures|map(p => p.url),
+                }) }}>
+                    <div class="text-center">Loading list ...</div>
+                </div>
+            </div>
+            <div class="space-y-12">
+                <header class="flex justify-between items-end">
+                    <h4 class="w-fit xl:text-lg relative !font-montserrat-sans font-medium">
+                        <span>Equipements electriques</span>
+                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>
+                    </h4>
+                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">
+                        <div class="flex justify-end items-center gap-x-1.5 text-dark font-medium">
+                            <span class="text-md">Voir tout</span>
+                            <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>
+                        </div>
+                    </a>
+                </header>
+                <div {{ stimulus_controller('features/product_list_preview', {
+                    previewList: content.background_pictures|map(p => p.url),
+                }) }}>
+                    <div class="text-center">Loading list ...</div>
+                </div>
+            </div>
+        </main>
+    </section>
 
 {#    <section class="h-80 relative">#}
 {#        <div class="absolute top-0 -z-10 h-full w-full bg-dark bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>#}
@@ -85,21 +77,23 @@
 {#            </h1>#}
 {#        </div>#}
 {#    </section>#}
-{#    <section class="bg-contain h-fit w-full bg-center bg-dark" >#}
-{#        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 px-3 lg:space-y-9 grid md:grid-cols-2">#}
-{#            <aside class="content-center">#}
-{#                <div class="space-y-3">#}
-{#                    <h3 class="text-6xl text-yellow-500 font-semibold  xl:w-3/5">{{ content.service_section_title }}</h3>#}
-{#                    <p class="text-xl font-light xl:w-3/5 text-start text-white/90">{{ content.service_section_subtitle }}</p>#}
-{#                </div>#}
-{#            </aside>#}
-{#            <aside {{ stimulus_controller('features/services_list',{#}
-{#                path: services_path.url })#}
-{#            }}>#}
-{#                <div class="text-center">Loading list ...</div>#}
-{#            </aside>#}
-{#        </div>#}
-{#    </section>#}
+    <section class="bg-contain h-fit w-full bg-center  relative" >
+        <div class="absolute top-0 -z-10 h-full w-full bg-dark bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>
+
+        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 px-3 lg:space-y-9 grid md:grid-cols-2">
+            <aside class="content-center">
+                <div class="space-y-3">
+                    <h3 class="text-6xl text-yellow-500 font-semibold  xl:w-3/5">{{ content.service_section_title }}</h3>
+                    <p class="text-xl font-light xl:w-3/5 text-start text-white/90">{{ content.service_section_subtitle }}</p>
+                </div>
+            </aside>
+            <aside {{ stimulus_controller('features/services_list',{
+                path: services_path.url })
+            }}>
+                <div class="text-center">Loading list ...</div>
+            </aside>
+        </div>
+    </section>
     <section class="h-fit w-full">
         <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 px-3 lg:space-y-9 grid md:grid-cols-3">
             <aside class="col-span-1">
@@ -122,29 +116,29 @@
             </aside>
         </div>
     </section>
-{#    <section class="xl:py-24">#}
-{#        <div class="container xl:space-y-12">#}
-{#            <header class="flex justify-between">#}
-{#                <h3 class="text-center text-4xl font-semibold text-dark">{{ content.project_title }}</h3>#}
-{#                <div class="bg-dark px-6 py-3 content-center text-center text-white">#}
-{#                    <a href="{{ sulu_content_path(case_study_path.url) }}">See all projects</a>#}
-{#                </div>#}
-{#            </header>#}
-{#            <div {{ stimulus_controller('sections/project_section') }}></div>#}
-{#        </div>#}
-{#    </section>#}
-{#    <section class="xl:py-12 bg-dark">#}
-{#        <div class="container" {{ stimulus_controller('sections/resource_section', {#}
-{#            content: content.edu_fill_text,#}
-{#            pictures: content.edu_pictures|map(p => p.url),#}
-{#            title: content.edu_title})#}
-{#        }}>#}
-{#        </div>#}
-{#    </section>#}
-{#    <section class="xl:py-12">#}
-{#        <div class="container">#}
-{#            {% include 'includes/widgets/embedded_map.html.twig' %}#}
-{#        </div>#}
-{#    </section>#}
+    <section class="xl:py-24">
+        <div class="container xl:space-y-12">
+            <header class="flex justify-between">
+                <h3 class="text-center text-4xl font-semibold text-dark">{{ content.project_title }}</h3>
+                <div class="bg-dark px-6 py-3 content-center text-center text-white">
+                    <a href="{{ sulu_content_path(case_study_path.url) }}">See all projects</a>
+                </div>
+            </header>
+            <div {{ stimulus_controller('sections/project_section') }}></div>
+        </div>
+    </section>
+    <section class="xl:py-12 bg-dark">
+        <div class="container" {{ stimulus_controller('sections/resource_section', {
+            content: content.edu_fill_text,
+            pictures: content.edu_pictures|map(p => p.url),
+            title: content.edu_title})
+        }}>
+        </div>
+    </section>
+    <section class="xl:py-12">
+        <div class="container">
+            {% include 'includes/widgets/embedded_map.html.twig' %}
+        </div>
+    </section>
 
 {% endblock %}

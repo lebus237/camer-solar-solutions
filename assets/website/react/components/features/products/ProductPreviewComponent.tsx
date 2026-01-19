@@ -14,7 +14,7 @@ export const ProductPreviewComponent = (props: { previewList: ProductType[] }) =
         perPage: 5,
         height: "340px",
         perMove: 1,
-        wheel: true,
+        wheel: false,
         interval: 3000,
         rewind: true,
       }}
