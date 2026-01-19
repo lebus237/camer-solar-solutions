@@ -16,110 +16,110 @@
     {% set services_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Our services' or item.title == 'Nos services') %}
     {% set case_study_path = sulu_page_navigation_root_flat('footer',1)|find(item => item.title == 'Case studies' or item.title == 'Nos realisations') %}
 
-{#    <section>#}
-{#        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}#}
-{#    </section>#}
-{#    <section class="container min-h-80 xl:py-24 lg:py-12 md:py-6 px-3 lg:space-y-12">#}
-{#        <header class="flex justify-between items-start">#}
-{#            <div class="space-y-3 xl:w-3/5">#}
-{#                <h3 class="text-4xl font-semibold text-dark font-sans">{{ content.product_section_title }}</h3>#}
-{#                <p class="text-md font-light lg:w-1/2">{{ content.product_section_subtitle }}</p>#}
-{#            </div>#}
-{#        </header>#}
-{#        <main class="xl:space-y-12">#}
-{#            <div class="space-y-12">#}
-{#                <header class="flex justify-between items-end">#}
-{#                    <h4 class="w-fit xl:text-lg relative  font-medium !font-montserrat-sans">#}
-{#                        <span>Equipements solaires</span>#}
-{#                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>#}
-{#                    </h4>#}
-{#                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">#}
-{#                        <div class="flex justify-end items-center gap-x-1.5 text-dark font-medium">#}
-{#                            <span class="text-md">Voir tout</span>#}
-{#                            <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </header>#}
-{#                <div {{ stimulus_controller('features/product_list_preview', {#}
-{#                    previewList: content.background_pictures|map(p => p.url),#}
-{#                }) }}>#}
-{#                    <div class="text-center">Loading list ...</div>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="space-y-12">#}
-{#                <header class="flex justify-between items-end">#}
-{#                    <h4 class="w-fit xl:text-lg relative !font-montserrat-sans font-medium">#}
-{#                        <span>Equipements electriques</span>#}
-{#                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>#}
-{#                    </h4>#}
-{#                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">#}
-{#                        <div class="flex justify-end items-center gap-x-1.5 text-dark font-medium">#}
-{#                            <span class="text-md">Voir tout</span>#}
-{#                            <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>#}
-{#                        </div>#}
-{#                    </a>#}
-{#                </header>#}
-{#                <div {{ stimulus_controller('features/product_list_preview', {#}
-{#                    previewList: content.background_pictures|map(p => p.url),#}
-{#                }) }}>#}
-{#                    <div class="text-center">Loading list ...</div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </main>#}
-{#    </section>#}
+    <section>
+        {% include 'includes/sections/hero_section.html.twig' with { content: content } %}
+    </section>
+    <section class="container min-h-80 xl:py-24 lg:py-12 md:py-6 px-3 lg:space-y-12">
+        <header class="flex justify-between items-start">
+            <div class="space-y-3 xl:w-3/5">
+                <h3 class="text-4xl font-semibold text-dark font-sans">{{ content.product_section_title }}</h3>
+                <p class="text-md font-light lg:w-1/2">{{ content.product_section_subtitle }}</p>
+            </div>
+        </header>
+        <main class="xl:space-y-12">
+            <div class="space-y-12">
+                <header class="flex justify-between items-end">
+                    <h4 class="w-fit xl:text-lg relative  font-medium !font-montserrat-sans">
+                        <span>Equipements solaires</span>
+                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>
+                    </h4>
+                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">
+                        <div class="flex justify-end items-center gap-x-1.5 text-dark font-medium">
+                            <span class="text-md">Voir tout</span>
+                            <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>
+                        </div>
+                    </a>
+                </header>
+                <div {{ stimulus_controller('features/product_list_preview', {
+                    previewList: content.background_pictures|map(p => p.url),
+                }) }}>
+                    <div class="text-center">Loading list ...</div>
+                </div>
+            </div>
+            <div class="space-y-12">
+                <header class="flex justify-between items-end">
+                    <h4 class="w-fit xl:text-lg relative !font-montserrat-sans font-medium">
+                        <span>Equipements electriques</span>
+                        <div class="h-1.5 w-full absolute -bottom-3 bg-yellow-500"></div>
+                    </h4>
+                    <a href="{{ sulu_content_path(catalog_path.url) }}" class="block xl:basis-1/5">
+                        <div class="flex justify-end items-center gap-x-1.5 text-dark font-medium">
+                            <span class="text-md">Voir tout</span>
+                            <span {{ stimulus_controller('components/base_icon', {type: 'arrow-right', size: 20}) }}></span>
+                        </div>
+                    </a>
+                </header>
+                <div {{ stimulus_controller('features/product_list_preview', {
+                    previewList: content.background_pictures|map(p => p.url),
+                }) }}>
+                    <div class="text-center">Loading list ...</div>
+                </div>
+            </div>
+        </main>
+    </section>
 
-{#    <section class="bg-contain h-fit w-full bg-center  relative" >#}
-{#        <div class="absolute top-0 -z-10 h-full w-full bg-dark bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>#}
+    <section class="bg-contain h-fit w-full bg-center  relative" >
+        <div class="absolute top-0 -z-10 h-full w-full bg-dark bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:20px_20px]"></div>
 
-{#        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 px-3 lg:space-y-9 grid md:grid-cols-2">#}
-{#            <aside class="content-center">#}
-{#                <div class="space-y-3">#}
-{#                    <h3 class="text-[68px] text-yellow-500 leading-[100%] font-bold text-start  xl:w-3/5">{{ content.service_section_title }}</h3>#}
-{#                    <p class="text-md font-light xl:w-3/5 text-start text-white/90">{{ content.service_section_subtitle }}</p>#}
-{#                </div>#}
-{#            </aside>#}
-{#            <aside {{ stimulus_controller('features/services_list',{#}
-{#                path: services_path.url })#}
-{#            }}>#}
-{#                <div class="text-center">Loading list ...</div>#}
-{#            </aside>#}
-{#        </div>#}
-{#    </section>#}
-{#    <section class="h-fit w-full">#}
-{#        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 lg:space-y-9 grid md:grid-cols-3">#}
-{#            <aside class="col-span-1">#}
-{#                <div class="space-y-6">#}
-{#                    <h3 class="text-2xl text-yellow-500 font-medium font-montserrat-sans">{{ content.testimonials_section_title }}</h3>#}
-{#                    <p class="text-[68px] leading-[100%] font-bold text-start">{{ content.testimonials_section_subtitle }}</p>#}
-{#                </div>#}
-{#            </aside>#}
-{#            <aside class="col-span-2 xl:pl-36">#}
-{#                <div {{ stimulus_controller('features/testimonials_list',{#}
-{#                    previewList: [] })#}
-{#                }}>#}
-{#                    <div class="text-center">Loading list ...</div>#}
-{#                </div>#}
-{#                <div {{ stimulus_controller('features/testimonials_list',{#}
-{#                    previewList: [] })#}
-{#                }}>#}
-{#                    <div class="text-center">Loading list ...</div>#}
-{#                </div>#}
-{#            </aside>#}
-{#        </div>#}
-{#    </section>#}
-{#    <section class="xl:pt-6 xl:pb-24">#}
-{#        <div class="container xl:space-y-12">#}
-{#            <header class="flex justify-between items-end">#}
-{#                <div class="xl:basis-1/2">#}
-{#                    <h3 class="text-[68px] xl:w-3/4  leading-[100%] font-bold text-start text-yellow-500">{{ content.project_title }}</h3>#}
-{#                </div>#}
-{#                <div class="bg-dark px-6 py-3 h-fit content-center text-center text-white">#}
-{#                    <a href="{{ sulu_content_path(case_study_path.url) }}">Tous les projects</a>#}
-{#                </div>#}
-{#            </header>#}
-{#            <div {{ stimulus_controller('sections/project_section') }}></div>#}
-{#        </div>#}
-{#    </section>#}
+        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 px-3 lg:space-y-9 grid md:grid-cols-2">
+            <aside class="content-center">
+                <div class="space-y-3">
+                    <h3 class="text-[68px] text-yellow-500 leading-[100%] font-bold text-start  xl:w-3/5">{{ content.service_section_title }}</h3>
+                    <p class="text-md font-light xl:w-3/5 text-start text-white/90">{{ content.service_section_subtitle }}</p>
+                </div>
+            </aside>
+            <aside {{ stimulus_controller('features/services_list',{
+                path: services_path.url })
+            }}>
+                <div class="text-center">Loading list ...</div>
+            </aside>
+        </div>
+    </section>
+    <section class="h-fit w-full">
+        <div class="container min-h-80 xl:py-20 lg:py-8 md:py-6 lg:space-y-9 grid md:grid-cols-3">
+            <aside class="col-span-1">
+                <div class="space-y-6">
+                    <h3 class="text-2xl text-yellow-500 font-medium font-montserrat-sans">{{ content.testimonials_section_title }}</h3>
+                    <p class="text-[68px] leading-[100%] font-bold text-start">{{ content.testimonials_section_subtitle }}</p>
+                </div>
+            </aside>
+            <aside class="col-span-2 xl:pl-36">
+                <div {{ stimulus_controller('features/testimonials_list',{
+                    previewList: [] })
+                }}>
+                    <div class="text-center">Loading list ...</div>
+                </div>
+                <div {{ stimulus_controller('features/testimonials_list',{
+                    previewList: [] })
+                }}>
+                    <div class="text-center">Loading list ...</div>
+                </div>
+            </aside>
+        </div>
+    </section>
+    <section class="xl:pt-6 xl:pb-24">
+        <div class="container xl:space-y-12">
+            <header class="flex justify-between items-end">
+                <div class="xl:basis-1/2">
+                    <h3 class="text-[68px] xl:w-3/4  leading-[100%] font-bold text-start text-yellow-500">{{ content.project_title }}</h3>
+                </div>
+                <div class="bg-dark px-6 py-3 h-fit content-center text-center text-white">
+                    <a href="{{ sulu_content_path(case_study_path.url) }}">Tous les projects</a>
+                </div>
+            </header>
+            <div {{ stimulus_controller('sections/project_section') }}></div>
+        </div>
+    </section>
 {#    <section class="xl:py-12 bg-dark">#}
 {#        <div class="container" {{ stimulus_controller('sections/resource_section', {#}
 {#            content: content.edu_fill_text,#}

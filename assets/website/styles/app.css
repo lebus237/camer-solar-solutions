@@ -8,7 +8,7 @@
   --font-sans: "Commissioner", sans-serif;
   --font-montserrat-sans: "Montserrat", sans-serif;
 
-  --text-md: 1rem;
+  --text-md: 15px;
 
   --color-dark: rgba(28, 28, 29, 1);
   --color-primary: oklch(62.7% 0.194 149.214);

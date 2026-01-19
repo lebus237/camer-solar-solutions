@@ -12,9 +12,12 @@
         {% block page_content %}{% endblock %}
     </main>
 
-    <footer class="w-full bg-gray-200 h-80">
-        {% block footer %}
-            <p>Copyright {{ 'now'|date('Y') }} SULU</p>
-        {% endblock %}
-    </footer>
+
+    {% block footer %}
+        <footer class="bg-dark mt-2">
+            <div class="container text-[15px] h-14 text-yellow-500 flex justify-between items-center">
+                <p>Copyright {{ 'now'|date('Y') }} IT's</p>
+            </div>
+        </footer>
+    {% endblock %}
 {% endblock %}
