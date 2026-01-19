@@ -20,7 +20,6 @@ export function ProjectPreviewComponent(
         perPage: 3,
         height: "700px",
         perMove: 1,
-        wheel: true,
         interval: 3000,
         rewind: true,
       }}

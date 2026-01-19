@@ -3,7 +3,7 @@ import { ProductType } from "../../../../types/ProductType";
 import { CarouselComponent } from "../../widgets/CarouselComponent";
 import { TestimonialCard } from "./TestimonialCard";
 import { TestimonialType } from "../../../../types/TestimonialType";
-import {Fade} from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 export const TestimonialsPreviewComponent = (props: { previewList: TestimonialType[] }) => {
   return (
@@ -17,13 +17,13 @@ export const TestimonialsPreviewComponent = (props: { previewList: TestimonialTy
         height: "290px",
         perMove: 1,
         wheel: true,
-        interval: 5000,
+        interval: 10000,
         rewind: true,
       }}
       renderItem={(item) => (
         <div className="p-1 h-full content-center">
           <Fade direction="down" cascade duration={500} delay={300} damping={0.1}>
-              <TestimonialCard {...item} />
+            <TestimonialCard {...item} />
           </Fade>
         </div>
       )}
