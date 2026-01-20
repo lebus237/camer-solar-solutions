@@ -59,12 +59,14 @@
                 <environment type="prod">
                     <urls>
                         <url language="fr">{host}</url>
+                        <url language="fr">{host}/{localization}</url>
                         <url language="en">{host}/{localization}</url>
                     </urls>
                 </environment>
                 <environment type="dev">
                     <urls>
                         <url language="fr">{host}</url>
+                        <url language="fr">{host}/{localization}</url>
                         <url language="en">{host}/{localization}</url>
                     </urls>
                 </environment>

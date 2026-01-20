@@ -18,7 +18,7 @@ export const ProductCard = (props: ProductType & { color: "dark" | "primary" }) 
                 },
               )}
             >
-              <span className="text-lg font-bold font-sans">
+              <span className="text-lg font-bold font-mono">
                 {Number(props.price).toLocaleString("fr-FR", {
                   style: "currency",
                   currency: "XAF",

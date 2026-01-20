@@ -10,7 +10,9 @@ export const ProductBrowserComponent = (props: { path?: string }) => {
         throw new Error("Function not implemented.");
       }}
       renderItem={(product: ProductType, index?: number) => (
-        <ProductCard2 {...product} index={index} />
+        <a className="block" href={`${props.path}/${product.id}`} key={product.id}>
+          <ProductCard2 {...product} index={index} />
+        </a>
       )}
     />
   );

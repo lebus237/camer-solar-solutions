@@ -12,8 +12,6 @@
 
 {% block inner_content %}
     {% set catalog_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Catalog' or item.title == 'Catalogue') %}
-    {{ dump(_context) }}
-
 
     <section class="xl:h-48 content-center relative">
         <h3 class=" text-center text-5xl font-bold w-fit mx-auto">
@@ -22,6 +20,6 @@
         <div class="h-1.5 bg-yellow-500 w-24 left-[calc(50%-48px)] absolute bottom-12"></div>
     </section>
     <section>
-        <div class="container xl:pt-12 xl:pb-24" {{ stimulus_controller('features/product_browser', { path: catalog_path.url }) }}></div>
+        <div class="container xl:pt-12 xl:pb-24" {{ stimulus_controller('features/product_browser', { path: catalog_path.url, locale: app.request.locale }) }}></div>
     </section>
 {% endblock %}

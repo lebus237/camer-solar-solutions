@@ -5,10 +5,11 @@ import { ProductBrowserComponent } from "@/react/components/features/products/Pr
 export default class extends Controller {
   static values = {
     path: String,
+    locale: String,
   };
 
   connect() {
     const root = createRoot(this.element);
-    root.render(<ProductBrowserComponent path={this.pathValue} />);
+    root.render(<ProductBrowserComponent path={`/${this.localeValue}${this.pathValue}`} />);
   }
 }
