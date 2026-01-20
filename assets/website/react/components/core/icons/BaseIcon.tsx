@@ -1,4 +1,12 @@
-import { ArrowLeft, ArrowRight, CalendarCheck2, CalendarDays, MapPin, Phone } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CalendarCheck2,
+  CalendarDays,
+  ChevronRight,
+  MapPin,
+  Phone,
+} from "lucide-react";
 import React from "react";
 
 export type IconType =
@@ -7,6 +15,7 @@ export type IconType =
   | "calendar-days"
   | "phone"
   | "map-pin"
+  | "chevron-right"
   | "calendar-check";
 
 export function BaseIcon({ type, ...props }: { type: IconType; size?: number }) {
@@ -25,6 +34,8 @@ export function BaseIcon({ type, ...props }: { type: IconType; size?: number }) 
       return <Phone size={size} />;
     case "map-pin":
       return <MapPin size={size} />;
+    case "chevron-right":
+      return <ChevronRight size={size} />;
     default:
       return <div>OKAYYYYYY</div>;
   }

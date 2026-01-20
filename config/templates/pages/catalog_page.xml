@@ -34,5 +34,35 @@
 
             <tag name="sulu.rlp"/>
         </property>
+        <section name="hero_section">
+            <meta>
+                <title lang="fr">Bannière</title>
+                <title lang="en">Hero Section</title>
+            </meta>
+            <properties>
+                <property name="hero_title" type="text_line">
+                    <meta>
+                        <title lang="fr">Titre</title>
+                        <title lang="en">Title</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+                <property name="hero_subtitle" type="text_area">
+                    <meta>
+                        <title lang="fr">Sous-titre</title>
+                        <title lang="en">Subtitle</title>
+                    </meta>
+                    <params>
+                        <param name="headline" value="true"/>
+                    </params>
+
+                    <tag name="sulu.rlp.part"/>
+                </property>
+            </properties>
+        </section>
     </properties>
 </template>

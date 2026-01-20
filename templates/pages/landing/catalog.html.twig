@@ -1,5 +1,24 @@
-{% extends 'pages/layout.html.twig' %}
+{% extends 'pages/page_container.html.twig' %}
 
-{% block page_content %}
-    <div>Catalogue de produits</div>
+{% block meta %}
+    {{ include('@SuluWebsite/Extension/seo.html.twig', {
+        seo: extension.seo|default([]),
+        content: content|default([]),
+        localizations: localizations|default([]),
+        shadowBaseLocale: shadowBaseLocale|default(),
+    }) }}
+{% endblock %}
+
+
+{% block inner_content %}
+
+    <section class="xl:h-48 content-center relative">
+        <h3 class=" text-center text-5xl font-bold w-fit mx-auto">
+            {{ content.hero_title }}
+        </h3>
+        <div class="h-1.5 bg-yellow-500 w-24 left-[calc(50%-48px)] absolute bottom-12"></div>
+    </section>
+    <section>
+        <div class="container xl:pt-12 xl:pb-24" {{ stimulus_controller('features/product_browser') }}></div>
+    </section>
 {% endblock %}

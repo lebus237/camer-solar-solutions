@@ -1,6 +1,6 @@
 import React from "react";
-import { ProductType } from "../../../../types/ProductType";
-import { cn } from "../../../../lib/styles/classnames";
+import { ProductType } from "@/types/ProductType";
+import { cn } from "@/lib/utils";
 
 export const ProductCard = (props: ProductType & { color: "dark" | "primary" }) => {
   return (

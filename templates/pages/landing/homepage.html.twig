@@ -10,7 +10,6 @@
 {% endblock %}
 
 
-
 {% block page_content %}
     {% set catalog_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Catalog' or item.title == 'Catalogue') %}
     {% set services_path = sulu_page_navigation_root_flat('main',1)|find(item => item.title == 'Our services' or item.title == 'Nos services') %}

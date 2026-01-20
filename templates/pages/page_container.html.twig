@@ -1,0 +1,34 @@
+{% extends 'pages/layout.html.twig' %}
+
+
+{% block page_content %}
+    {% set uuid = _context.resource.uuid %}
+    {% set nav_length = sulu_page_breadcrumb(uuid)|length %}
+    {% set count = 0 %}
+
+    {% block breadcrumb_navigation %}
+        <header class="h-14 bg-gray-100 w-full content-center border-t border-gray-200">
+            <nav class="container flex items-center1">
+                {% for item in sulu_page_breadcrumb(uuid) %}
+                    {% set count = count + 1 %}
+
+                    {% if count == nav_length %}
+                        <div class="">
+                            <a href="{{ sulu_content_path(item.url) }}" class="text-md text-dark">{{ item.title }}</a>
+                        </div>
+                    {% else %}
+                        <div class="flex items-center text-dark/60">
+                            <a href="{{ sulu_content_path(item.url) }}" class="text-md ">{{ item.title }}</a>
+                            <span {{ stimulus_controller('components/base_icon', { type: 'chevron-right', size: 16 }) }}></span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </nav>
+        </header>
+    {% endblock %}
+
+    <main>
+        {% block inner_content %}
+        {% endblock %}
+    </main>
+{% endblock %}

@@ -1,7 +1,7 @@
 import React from "react";
-import { ProductType } from "../../../../types/ProductType";
-import { CarouselComponent } from "../../widgets/CarouselComponent";
+import { ProductType } from "@/types/ProductType";
 import { ProductCard } from "./ProductCard";
+import { CarouselComponent } from "@/react/components/widgets/CarouselComponent";
 
 export const ProductPreviewComponent = (props: { previewList: ProductType[] }) => {
   return (

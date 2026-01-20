@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../../../../lib/styles/classnames";
+import { cn } from "../../../../lib/utils";
 
 interface ButtonProps {
   children?: React.ReactNode;
