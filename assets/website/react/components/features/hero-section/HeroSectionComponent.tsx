@@ -2,7 +2,7 @@ import React from "react";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { Options } from "@splidejs/splide";
 import { useViewPort } from "../../../hooks/use-view-port";
-import Button from "../../core/button/Button";
+import AppButton from "../../core/button/AppButton";
 
 export type HeroSectionComponentProps = {
   picturesList: string[];
@@ -59,10 +59,10 @@ export const HeroSectionComponent = (props: HeroSectionComponentProps) => {
             </div>
             <div className="flex gap-x-3">
               <a href="/catalogue" className="">
-                <Button label="Voir catalogue" type="primary" variant="solid" />
+                <AppButton label="Voir catalogue" type="primary" variant="solid" />
               </a>
               <a href="/contacts" className="cursor-pointer">
-                <Button label="Contactez-nous" type="default" variant="outline" />
+                <AppButton label="Contactez-nous" type="default" variant="outline" />
               </a>
             </div>
           </div>

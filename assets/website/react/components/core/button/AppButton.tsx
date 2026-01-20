@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../../../../lib/utils";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps {
   children?: React.ReactNode;
@@ -26,7 +26,7 @@ const buttonStyles = (type: ButtonProps["type"], variant: ButtonProps["variant"]
   }
 };
 
-const Button = (props: ButtonProps) => {
+const AppButton = (props: ButtonProps) => {
   return (
     <button
       className={cn(
@@ -40,4 +40,4 @@ const Button = (props: ButtonProps) => {
   );
 };
 
-export default Button;
+export default AppButton;
