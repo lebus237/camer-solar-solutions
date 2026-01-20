@@ -10,6 +10,11 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "jsx": "react",
+
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./assets/website/*"],
+    },
   },
   "include": ["assets/**/*"],
   "exclude": ["node_modules"],
